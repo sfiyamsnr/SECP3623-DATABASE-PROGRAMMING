@@ -1,0 +1,119 @@
+[{
+  "_id": {
+    "$oid": "695e821bbf393021d4e44190"
+  },
+  "driver_id": "D001",
+  "name": "Ahmad",
+  "vehicle_type": "Motorcycle",
+  "rating": 4.7,
+  "joined_date": "2024-08-10",
+  "vehicle_info": {
+    "plate_number": "JQK1234",
+    "capacity": 15
+  },
+  "current_deliveries": [
+    "ORD1001",
+    "ORD1003"
+  ]
+},
+{
+  "_id": {
+    "$oid": "695f80bcdbc4513b85d4931a"
+  },
+  "driver_id": "D002",
+  "name": "Abdul",
+  "vehicle_type": "Motorcycle",
+  "rating": 4.3,
+  "joined_date": {
+    "$date": "2024-11-10T00:00:00.000Z"
+  },
+  "vehicle_info": {
+    "plate_number": "VAB5678",
+    "capacity": 20
+  },
+  "current_deliveries": [
+    "ORD1002",
+    "ORD1004"
+  ]
+},
+{
+  "_id": {
+    "$oid": "695f80bcdbc4513b85d4931b"
+  },
+  "driver_id": "D003",
+  "name": "Sofi",
+  "vehicle_type": "Car",
+  "rating": 4.5,
+  "joined_date": {
+    "$date": "2024-09-05T00:00:00.000Z"
+  },
+  "vehicle_info": {
+    "plate_number": "JNP9010",
+    "capacity": 25
+  },
+  "current_deliveries": [
+    "ORD1005",
+    "ORD1006",
+    "ORD1007"
+  ]
+},
+{
+  "_id": {
+    "$oid": "695f80bcdbc4513b85d4931c"
+  },
+  "driver_id": "D004",
+  "name": "Ali",
+  "vehicle_type": "Motorcycle",
+  "rating": 4.9,
+  "joined_date": {
+    "$date": "2024-07-20T00:00:00.000Z"
+  },
+  "vehicle_info": {
+    "plate_number": "WXY9911",
+    "capacity": 18
+  },
+  "current_deliveries": [
+    "ORD1008",
+    "ORD1009"
+  ]
+},
+{
+  "_id": {
+    "$oid": "695f80bcdbc4513b85d4931d"
+  },
+  "driver_id": "D005",
+  "name": "Aina",
+  "vehicle_type": "Van",
+  "rating": 4.1,
+  "joined_date": {
+    "$date": "2024-10-01T00:00:00.000Z"
+  },
+  "vehicle_info": {
+    "plate_number": "VAN3344",
+    "capacity": 40
+  },
+  "current_deliveries": [
+    "ORD1010",
+    "ORD1011",
+    "ORD1012",
+    "ORD1013",
+    "ORD1014"
+  ]
+},
+{
+  "_id": {
+    "$oid": "695f80bcdbc4513b85d4931e"
+  },
+  "driver_id": "D006",
+  "name": "Hafiy",
+  "vehicle_type": "Car",
+  "rating": 4.6,
+  "joined_date": {
+    "$date": "2024-06-15T00:00:00.000Z"
+  },
+  "vehicle_info": {
+    "plate_number": "CAR5566",
+    "capacity": 30
+  },
+  "current_deliveries": []
+}]

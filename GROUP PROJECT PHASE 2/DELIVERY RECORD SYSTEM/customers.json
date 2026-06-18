@@ -1,0 +1,103 @@
+[{
+  "_id": {
+    "$oid": "6961f52cba0447b9dc027c8b"
+  },
+  "customer_id": "C001",
+  "name": "Kang Taehyun",
+  "email": "taehyun@gmail.com",
+  "phone": "011-99998888",
+  "joined_date": {
+    "$date": "2024-01-10T00:00:00.000Z"
+  },
+  "saved_address": [
+    {
+      "label": "Home",
+      "address": "No 15, Jalan Sg Buaya, Rawang"
+    },
+    {
+      "label": "Office",
+      "address": "Perodua, Sg Choh"
+    },
+    {
+      "label": "Gym",
+      "address": "Sri Hartamas, KL"
+    }
+  ],
+  "is_premium": true
+},
+{
+  "_id": {
+    "$oid": "6961f52cba0447b9dc027c8c"
+  },
+  "customer_id": "C002",
+  "name": "Choi Beomgyu",
+  "email": "beomgyu@gmail.com",
+  "phone": "012-22223333",
+  "joined_date": {
+    "$date": "2024-02-15T00:00:00.000Z"
+  },
+  "saved_address": [
+    {
+      "label": "Home",
+      "address": "Taman Melawati, KL"
+    }
+  ],
+  "is_premium": false
+},
+{
+  "_id": {
+    "$oid": "6961f52cba0447b9dc027c8d"
+  },
+  "customer_id": "C003",
+  "name": "Huening Kai",
+  "email": "kai@gmail.com",
+  "phone": "015-44445555",
+  "joined_date": {
+    "$date": "2023-11-20T00:00:00.000Z"
+  },
+  "saved_address": [
+    {
+      "label": "Work",
+      "address": "Kilang Gula, Shah Alam"
+    }
+  ],
+  "is_premium": true
+},
+{
+  "_id": {
+    "$oid": "6961f52cba0447b9dc027c8f"
+  },
+  "customer_id": "C005",
+  "name": "Choi Yeonjun",
+  "email": "yeonjun@gmail.com",
+  "phone": "018-88889999",
+  "joined_date": {
+    "$date": "2024-01-05T00:00:00.000Z"
+  },
+  "saved_address": [
+    {
+      "label": "Home",
+      "address": "Bandar Country Homes, Rawang"
+    }
+  ],
+  "is_premium": true
+},
+{
+  "_id": {
+    "$oid": "6962186bba0447b9dc027c90"
+  },
+  "customer_id": "C006",
+  "name": "Lee Jihoon",
+  "email": "jihoon@gmail.com",
+  "phone": "019-5556667",
+  "joined_date": {
+    "$date": "2026-01-10T09:14:19.012Z"
+  },
+  "saved_address": [
+    {
+      "label": "Home",
+      "address": "Jalan Ampang, KL"
+    }
+  ],
+  "is_premium": false
+}]

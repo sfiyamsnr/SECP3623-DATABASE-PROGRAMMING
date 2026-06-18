@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "6962283dbb8e0594372cd46d"
+  },
+  "delivery_id": "DEL001",
+  "order_id": "ORD1001",
+  "driver_id": "D001",
+  "delivery_status": "Completed",
+  "delivery_fee": 6.5,
+  "delivery_date": {
+    "$date": "2024-08-12T14:30:00.000Z"
+  },
+  "payment_method": "Cash"
+},
+{
+  "_id": {
+    "$oid": "69623047bb8e0594372cd46e"
+  },
+  "delivery_id": "DEL002",
+  "order_id": "ORD1002",
+  "driver_id": "D002",
+  "delivery_status": "Cancelled",
+  "delivery_fee": 0,
+  "delivery_date": {
+    "$date": "2024-08-12T14:30:00.000Z"
+  },
+  "payment_method": "Cash"
+},
+{
+  "_id": {
+    "$oid": "69623047bb8e0594372cd46f"
+  },
+  "delivery_id": "DEL003",
+  "order_id": "ORD1003",
+  "driver_id": "D003",
+  "delivery_status": "Pending",
+  "delivery_fee": 4.5,
+  "delivery_date": {
+    "$date": "2024-08-12T14:30:00.000Z"
+  },
+  "payment_method": "Cash"
+},
+{
+  "_id": {
+    "$oid": "6964859bbb8e0594372cd480"
+  },
+  "delivery_id": "DEL004",
+  "order_id": "ORD1004",
+  "driver_id": "D004",
+  "delivery_status": "Pending",
+  "delivery_fee": 4.5,
+  "delivery_date": {
+    "$date": "2024-08-12T14:30:00.000Z"
+  },
+  "payment_method": "Cash"
+},
+{
+  "_id": {
+    "$oid": "69648611bb8e0594372cd482"
+  },
+  "delivery_id": "DEL005",
+  "order_id": "ORD1005",
+  "driver_id": "D005",
+  "delivery_status": "Pending",
+  "delivery_fee": 4,
+  "delivery_date": {
+    "$date": "2024-08-12T14:30:00.000Z"
+  },
+  "payment_method": "Cash"
+}]

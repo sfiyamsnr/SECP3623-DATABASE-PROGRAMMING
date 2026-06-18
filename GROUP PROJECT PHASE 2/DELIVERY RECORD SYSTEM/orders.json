@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "696484c0bb8e0594372cd47a"
+  },
+  "order_id": "ORD1001",
+  "customer_id": "C001",
+  "order_date": {
+    "$date": "2025-12-01T10:00:00.000Z"
+  },
+  "total_amount": 18.5,
+  "status": "Completed",
+  "product_details": [
+    {
+      "product_name": "Corrugated Box (M)",
+      "qty": 5,
+      "price": 2.5
+    },
+    {
+      "product_name": "Bubble Wrap Roll (1m)",
+      "qty": 1,
+      "price": 6
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "696484c0bb8e0594372cd47b"
+  },
+  "order_id": "ORD1002",
+  "customer_id": "C002",
+  "order_date": {
+    "$date": "2025-12-02T14:30:00.000Z"
+  },
+  "total_amount": 45,
+  "status": "Pending",
+  "product_details": [
+    {
+      "product_name": "Premium Poly Mailer (100pcs)",
+      "qty": 1,
+      "price": 45
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "696484c0bb8e0594372cd47c"
+  },
+  "order_id": "ORD1003",
+  "customer_id": "C001",
+  "order_date": {
+    "$date": "2025-12-05T09:15:00.000Z"
+  },
+  "total_amount": 12,
+  "status": "Shipped",
+  "product_details": [
+    {
+      "product_name": "Fragile Stickers (Roll)",
+      "qty": 2,
+      "price": 6
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "696484c0bb8e0594372cd47d"
+  },
+  "order_id": "ORD1004",
+  "customer_id": "C003",
+  "order_date": {
+    "$date": "2025-12-06T11:20:00.000Z"
+  },
+  "total_amount": 30,
+  "status": "Pending",
+  "product_details": [
+    {
+      "product_name": "A4 Document Flyer",
+      "qty": 50,
+      "price": 0.6
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "696484c0bb8e0594372cd47e"
+  },
+  "order_id": "ORD1005",
+  "customer_id": "C002",
+  "order_date": {
+    "$date": "2025-12-07T08:45:00.000Z"
+  },
+  "total_amount": 8.5,
+  "status": "Completed",
+  "product_details": [
+    {
+      "product_name": "Clear Packing Tape",
+      "qty": 2,
+      "price": 3
+    },
+    {
+      "product_name": "Permanent Marker",
+      "qty": 1,
+      "price": 2.5
+    }
+  ]
+}]
