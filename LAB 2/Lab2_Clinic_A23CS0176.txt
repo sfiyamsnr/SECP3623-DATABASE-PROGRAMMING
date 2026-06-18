@@ -1,0 +1,217 @@
+PART A - DATA PREPARATION
+
+QUESTION A1 
+
+use clinicdb
+switched to db clinicdb
+db.createCollection("appointments")
+db.createCollection("loginSessions")
+
+QUESTION A2
+
+- appoinments collection
+
+db.appointments.insertMany([
+  {
+    appointmentId: "A001",
+    patientName: "Ahmad",
+    doctor: "Dr. Ali",
+    department: "Cardiology",
+    status: "COMPLETED",
+    fee: 250,
+    appointmentDate: ISODate("2025-05-01")
+  },
+  {
+    appointmentId: "A002",
+    patientName: "Siti",
+    doctor: "Dr. Lee",
+    department: "Dermatology",
+    status: "PENDING",
+    fee: 120,
+    appointmentDate: ISODate("2025-05-03")
+  },
+  {
+    appointmentId: "A003",
+    patientName: "Abu",
+    doctor: "Dr. Karim",
+    department: "Orthopedics",
+    status: "COMPLETED",
+    fee: 300,
+    appointmentDate: ISODate("2025-05-04")
+  },
+  {
+    appointmentId: "A004",
+    patientName: "Nurul",
+    doctor: "Dr. Farah",
+    department: "Cardiology",
+    status: "CANCELLED",
+    fee: 180,
+    appointmentDate: ISODate("2025-05-05")
+  },
+  {
+    appointmentId: "A005",
+    patientName: "Aina",
+    doctor: "Dr. Lee",
+    department: "Dermatology",
+    status: "COMPLETED",
+    fee: 100,
+    appointmentDate: ISODate("2025-05-06")
+  },
+  {
+    appointmentId: "A006",
+    patientName: "Hafiz",
+    doctor: "Dr. Karim",
+    department: "Orthopedics",
+    status: "COMPLETED",
+    fee: 150,
+    appointmentDate: ISODate("2025-05-07")
+  }
+])
+
+- loginSessions collection
+
+db.loginSessions.insertMany([
+  {
+    staffId: "S001",
+    staffName: "Aina",
+    role: "Nurse",
+    status: "ACTIVE",
+    ipAddress: "192.168.1.10",
+    loginTime: ISODate("2025-05-07T08:30:00")
+  },
+  {
+    staffId: "S002",
+    staffName: "Hakim",
+    role: "Doctor",
+    status: "ACTIVE",
+    ipAddress: "192.168.1.11",
+    loginTime: ISODate("2025-05-07T09:00:00")
+  },
+  {
+    staffId: "S003",
+    staffName: "Sofia",
+    role: "Receptionist",
+    status: "INACTIVE",
+    ipAddress: "192.168.1.12",
+    loginTime: ISODate("2025-05-06T17:00:00")
+  },
+  {
+    staffId: "S004",
+    staffName: "Adam",
+    role: "Admin",
+    status: "ACTIVE",
+    ipAddress: "192.168.1.13",
+    loginTime: ISODate("2025-05-07T10:15:00")
+  },
+  {
+    staffId: "S005",
+    staffName: "Nabila",
+    role: "Doctor",
+    status: "INACTIVE",
+    ipAddress: "192.168.1.11",
+    loginTime: ISODate("2025-05-05T16:45:00")
+  },
+  {
+    staffId: "S006",
+    staffName: "Irfan",
+    role: "Nurse",
+    status: "ACTIVE",
+    ipAddress: "192.168.1.14",
+    loginTime: ISODate("2025-05-07T11:00:00")
+  }
+])
+
+PART B - APPOINTMENT REPORTING
+
+QUESTION B1 - ADVANCED QUERY & SORTING
+
+db.appointments.find(
+  {
+    status: "COMPLETED",
+    fee: { $gte: 100, $lte: 300 }
+  },
+  {
+    _id: 0,
+    appointmentId: 1,
+    patientName: 1,
+    department: 1,
+    fee: 1
+  }
+).sort(
+  {
+    department: 1,
+    fee: -1
+  }
+)
+
+QUESTION B2 - AGGREGATION SUMMARY
+
+db.appointments.aggregate([
+  {
+    $group: {
+      _id: "$department",
+      totalAppointments: { $sum: 1 },
+      totalFees: { $sum: "$fee" }
+    }
+  },
+  {
+    $sort: { totalFees: -1 }
+  }
+])
+
+PART C - CLINIC SECURITY MONITORING
+
+QUESTION C1 - ACTIVE STAFF SESSIONS
+
+db.loginSessions.find(
+  { status: "ACTIVE" },
+  {
+    _id: 0,
+    staffName: 1,
+    role: 1,
+    ipAddress: 1,
+    loginTime: 1
+  }
+).sort(
+  { loginTime: -1 }
+)
+
+QUESTION C2 - DISTINCT & COUNT
+
+C2(A) 
+
+db.loginSessions.distinct(
+  "ipAddress",
+  { status: "ACTIVE" }
+)
+
+C2(B)
+
+db.loginSessions.distinct(
+  "staffId",
+  { status: "ACTIVE" }
+).length
+
+PART D - INDEXING & DATA MAINTENANCE
+
+QUESTION D1 - COMPOUND INDEX
+
+db.appointments.createIndex(
+  { department: 1, status: 1 }
+)
+db.appointments.getIndexes()
+
+QUESTION D2 - UPDATE & DELETE OPERATIONS 
+
+D2(A)
+
+db.appointments.updateMany(
+  { status: "CANCELLED" },
+  { $set: { status: "ARCHIVED" } }
+)
+
+D2(B)
+
+db.loginSessions.deleteMany(
+  { status: "INACTIVE" }
+)
